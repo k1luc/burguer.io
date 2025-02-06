@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+.app_bar {
+  height: 60px;
+  background-color: orangered;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 26px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.app_logo {
+  flex: 2;
+  text-align: center;
+}
+
+.app_logo img {
+  width: 50px;
+}
+
+main {
+  padding: 20px;
+}
+
+main h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.item-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  margin: 5px;
+}
+
+.item-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.item-card .card-content {
+  position: relative;
+  padding: 10px;
+}
+
+.item-card .card-content h2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.item-card .card-content .item-price {
+  font-size: 22px;
+}
+
+.item-raiting {
+  color: yellow;
+  margin: 10px;
+}
+
+.item-card .item-option {
+  display: flex;
+}
+
+.item-card .item-option .option-detail {
+  flex: 2;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  text-align: center;
+  padding-block: 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.item-card .item-option .icon-option {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  border-radius: 100%;
+  margin-left: 5px;
+}
