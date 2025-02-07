@@ -12,7 +12,7 @@
 <body>
   <header class="header-details">
 
-    <img src="assets/x-burger.jpg" alt="X-Burguer">
+    <img src="assets/x-burger.jpg" alt="X-Burguer" class="image-item">
 
     <div class="option-details">
 
@@ -39,7 +39,7 @@
   </header>
 
   <main class="main-details">
-    <h1>X-Burguer</h1>
+    <h1 class="name-item">X-Burguer</h1>
 
     <section class="info-details">
 
@@ -58,20 +58,56 @@
       </div>
 
       <div class="galery-details">
-        <a href="#" class="galery-image"><img src="assets/x-burger.jpg" alt="X-Burguer"></a>
 
-        <a href="#" class="galery-image"><img src="assets/x-burger.jpg" alt="X-Burguer"></a>
+        <a href="#image01" class="galery-image">
+          <img src="assets/x-bacon.jpg" alt="X-Burguer">
+        </a>
+
+        <a href="#" class="lightbox" id="image01">
+          <span style="background-image: url(assets/x-bacon.jpg);">
+            <p>Experimente também o nosso X-Bacon</p>
+          </span>
+        </a>
+
+        <a href="#image02" class="galery-image">
+          <img src="assets/x-salada.jpg" alt="X-Burguer">
+        </a>
+
+        <a href="#" class="lightbox" id="image02">
+          <span style="background-image: url(assets/x-salada.jpg);">
+            <p>Experimente também o nosso X-Salada</p>
+          </span>
+        </a>
       </div>
 
       <div class="buy-item">
         <p class="price-item">R$ 12.90</p>
-        <a href="#" class="option-detail">Comprar Item</a>
+        <a onclick="openOrderConfirm()" class="option-detail">Comprar Item</a>
       </div>
 
     </section>
 
+    <script>
 
+      const urlParams = new URLSearchParams(window.location.search);
 
+      const itemName = urlParams.get('name');
+      const itemPrice = urlParams.get('price');
+      const itemImage = urlParams.get('image');
+
+      const imageDetail = document.querySelector('.image-item');
+      const nameDetail = document.querySelector('.name-item');
+      const priceDetail = document.querySelector('.price-item');
+
+      nameDetail.textContent = itemName;
+      priceDetail.textContent = "R$ " + itemPrice;
+      imageDetail.src = 'assets/' + itemImage
+
+      function openOrderConfirm() {
+        window.open('confirm_order.html?name=' + itemName + '&price=' + itemPrice + '&image=' + itemImage, '_self')
+      }
+
+    </script>
 
   </main>
 </body>

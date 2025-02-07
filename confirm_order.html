@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burguer.io</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <header class="app_bar">
+
+    <a href="index.html"><i class='bx bx-home'></i></a>
+
+    <div class="app_logo">
+
+      <img src="assets/burgerio_logo.png" alt="Burger.io Logo Marca">
+
+    </div>
+
+    <i class='bx bx-cart'></i>
+
+  </header>
+
+  <main class="main-confirm">
+
+    <h1>Confirme seu Pedido</h1>
+
+    <section class="order-itens">
+
+      <div class="order-card">
+
+        <div class="card-image">
+          <img src="assets/x-burger.jpg" alt="" id="item-image">
+        </div>
+
+        <div class="card-details">
+          <h2 id="item-name">X-Burger</h2>
+          <h3 id="item-price">R$ 12.90</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A veniam eum repellendus vero quisquam tempora
+          </p>
+        </div>
+
+
+      </div>
+
+      <a href="#" class="button-confirm">
+        <i class='bx bxl-whatsapp'></i> Fazer Pedido
+      </a>
+
+    </section>
+
+  </main>
+
+  <script>
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const itemName = urlParams.get("name");
+    const itemPrice = urlParams.get("price");
+    const itemImage = urlParams.get("image");
+
+    const elementPrice = document.getElementById("item-price");
+    const elementName = document.getElementById("item-name");
+    const elementImage = document.getElementById("item-image");
+
+    elementPrice.textContent = "R$ " + itemPrice;
+    elementName.textContent = itemName;
+    elementImage.src = "assets/" + itemImage
+
+  </script>
+</body>
+
+</html>
