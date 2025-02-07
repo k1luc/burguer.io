@@ -41,6 +41,7 @@ main h1 {
   margin-bottom: 10px;
 }
 
+/* HOME */
 .item-list {
   display: flex;
   justify-content: center;
@@ -80,31 +81,135 @@ main h1 {
   font-size: 22px;
 }
 
+.item-card .card-content p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .item-raiting {
+  display: flex;
   color: yellow;
   margin: 10px;
 }
 
 .item-card .item-option {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.item-card .item-option .option-detail {
+.option-detail {
   flex: 2;
   text-decoration: none;
   color: #333;
   background-color: #fff;
   text-align: center;
-  padding-block: 5px;
+  padding-block: 6px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.item-card .item-option .icon-option {
+.icon-option {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 5px;
+  padding: 8px;
   border-radius: 100%;
   margin-left: 5px;
+  display: flex;
+}
+
+/* DETAILS PAGE */
+.header-details {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+}
+
+.header-details img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.header-details .option-details {
+  position: relative;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.header-details .option-details a {
+  text-decoration: none;
+}
+
+.header-details .option-details #right-option {
+  display: flex;
+}
+
+.header-details .icon-option {
+  color: black;
+  font-size: 20px;
+}
+
+.main-details {
+  width: 100%;
+  position: absolute;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+  top: 240px;
+}
+
+.info-details .item-raiting {
+  color: #ff7700;
+}
+
+.info-details .item-raiting p {
+  color: #aaa;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.info-details .description-details {
+  font-size: 14px;
+  color: #333;
+  text-align: justify;
+}
+
+.info-details .galery-details {
+  display: flex;
+  margin-block: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-details .galery-details .galery-image {
+  flex: 1;
+  margin: 5px;
+}
+
+.info-details .galery-details .galery-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.info-details .buy-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-details .buy-item .price-item {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.info-details .buy-item .option-detail {
+  background-color: orangered;
+  color: #fff;
+  padding: 10px;
 }
